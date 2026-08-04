@@ -7,7 +7,12 @@
 один раз протух на четыре релиза (стояло v1.3, когда алгоритм был v1.7), потому что
 второй копии числа никто не обновляет.
 
-**Живая страница:** https://kseniyashev.github.io/katya-content-plan/
+**Две страницы:**
+
+| Кому | Ссылка | Что внутри |
+|---|---|---|
+| ПЦ | https://kseniyashev.github.io/katya-content-plan/ | системная версия: все поля слотов, распределения, ёмкость |
+| **Эксперту** | **https://kseniyashev.github.io/katya-content-plan/approve/** | пять полей и задание на запись голосового; адаптирована под телефон |
 
 Что внутри: распределение слотов недели (работы, источники, производство), 35 рилсов основного
 аккаунта, сторис и карусели, A/B-стенд хуков на прокладках, действия саппорта, Telegram, Threads.
@@ -17,7 +22,9 @@
 
 ```
 python3 engine/plan_render.py experts/katya/plans/2026-W31/plan.yaml --projection system
-cp experts/katya/plans/2026-W31/render/system.html <этот репозиторий>/index.html
+python3 engine/plan_render.py experts/katya/plans/2026-W31/plan.yaml --projection approve
+cp experts/katya/plans/2026-W31/render/system.html  <этот репозиторий>/index.html
+cp experts/katya/plans/2026-W31/render/approve.html <этот репозиторий>/approve/index.html
 ```
 
 Правки вносятся в `plan.yaml` и страница пересобирается — иначе они потеряются

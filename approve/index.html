@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>На аппрув · katya · 2026-W31</title>
+<style>
+:root{--cream:#FDFBF6;--navy:#1F3A5F;--accent:#B9461D;--beige:#F4F0E6;
+--ink:#16181C;--muted:#6B7280;--line:#E4DCCB;--green:#2E7D32;--gold:#C79A2B}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);
+font:15px/1.5 -apple-system,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;line-height:1.2;margin:0 0 6px;color:var(--navy)}
+.sub{color:var(--muted);font-size:14px;margin-bottom:22px}
+.badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:12px;
+background:var(--beige);color:var(--navy);margin-right:6px}
+.badge.warn{background:#FBEEE7;color:var(--accent)}
+.note{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);
+border-radius:0 8px 8px 0;padding:12px 16px;margin:18px 0;font-size:14px}
+.note b{color:var(--navy)}
+h2{font-size:18px;color:var(--navy);margin:30px 0 10px;padding-top:14px;
+border-top:2px solid var(--navy)}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:13.5px}
+th{background:var(--beige);color:var(--navy);text-align:left;font-weight:600;
+padding:8px 10px;border:1px solid var(--line);font-size:12.5px}
+td{padding:9px 10px;border:1px solid var(--line);vertical-align:top}
+tr.daystart td{border-top:2px solid var(--navy)}
+.dt{white-space:nowrap;color:var(--muted);font-size:12.5px}
+.topic{font-weight:600}
+.angle{color:#3d4450}
+.ask{background:#FAF7F0;font-size:13.5px;line-height:1.45}
+.askcol{width:38%}
+.sid{font-size:10px;color:var(--muted);margin-top:3px;letter-spacing:.02em}
+.note.src{border-left-color:var(--muted);font-size:13px}
+.locked{color:var(--muted);font-size:12.5px;white-space:nowrap}
+.job{display:inline-block;padding:1px 7px;border-radius:12px;font-size:11.5px;
+background:var(--beige);color:var(--navy)}
+.check{width:52px;text-align:center;color:var(--line);font-size:17px;white-space:nowrap}
+h3{font-size:14px;color:var(--navy);margin:0 0 8px}
+.cards{display:flex;flex-wrap:wrap;gap:14px;margin:14px 0}
+.card{flex:1 1 250px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+.card .note{margin:10px 0 0;font-size:12.5px;padding:8px 10px}
+table.mini{font-size:13px}
+table.mini td{border:none;border-bottom:1px solid var(--beige);padding:4px 0}
+.num{text-align:right;white-space:nowrap}
+.muted{color:var(--muted);font-weight:400}
+.caps{display:flex;flex-wrap:wrap;gap:14px;margin:14px 0}
+.cap{flex:1 1 220px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:13.5px}
+.cap.over{border-color:var(--accent);background:#FDF4F0}
+.capttl{font-weight:600;color:var(--navy);margin-bottom:6px;font-size:13px}
+.verdict{padding:10px 14px;border-radius:8px;font-size:14px;font-weight:600;margin:6px 0 4px}
+.verdict.ok{background:#EDF6ED;color:var(--green)}
+.verdict.bad{background:#FBEEE7;color:var(--accent)}
+.warn{color:var(--accent)}
+.note.warn{border-left-color:var(--accent)}
+.scroll{overflow-x:auto}
+.scroll table{min-width:100%;font-size:12px}
+.scroll td{max-width:230px}
+footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);
+color:var(--muted);font-size:12.5px}
+@media print{body{background:#fff}.wrap{max-width:none;padding:0}
+  tr{page-break-inside:avoid}h2{page-break-after:avoid}}
+/* Телефон: строка таблицы разворачивается в карточку. Эксперт открывает эту
+   страницу там же, где записывает голосовые, а пять колонок в 375 px не влезают. */
+@media (max-width:760px){
+  .wrap{padding:18px 12px 40px}
+  table,thead,tbody,tr,td{display:block;width:100%}
+  thead{display:none}
+  tr{background:#fff;border:1px solid var(--line);border-radius:10px;
+     margin:0 0 12px;padding:10px 12px;position:relative}
+  tr.daystart{border-top:1px solid var(--line)}
+  td{border:none;padding:4px 0 4px 0}
+  td:empty{display:none}
+  td[data-l]::before{content:attr(data-l);display:block;font-size:11px;
+    text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:1px}
+  td.topic{font-size:16px;font-weight:600}
+  td.ask{background:var(--beige);border-radius:8px;padding:10px 12px;margin-top:6px}
+  .check{position:absolute;top:10px;right:12px;width:auto;text-align:right}
+  .askcol{width:auto}
+}
+</style></head><body>
+<div class="wrap">
+<h1>Контент-план на аппрув</h1>
+<div class="sub">katya &middot; неделя 2026-W31 (2026-07-27 — 2026-08-02) &middot; план <code>katya-2026-W31</code> &middot; алгоритм v1.3<br><span class="badge">С2</span><span class="badge">статус: draft</span><span class="badge">микро-запуск</span><span class="badge">съёмка 24.07</span><span class="badge warn">Радар не подавался</span></div>
+<div class="note"><b>Что с этим делать.</b> Посмотреть тему и угол каждой карточки. Тему и угол можно менять — это ваша территория. Формат заблокирован: он посчитан от ёмкости съёмочного дня, и правка одной строки двигает остальные.<br><br>На каждую утверждённую карточку — <b>голосовое по заданию справа</b>. Это не текст ролика и не пересказ: наговорите так, как объяснили бы клиенту, своими словами, 2–3 минуты. Из этого потом соберутся и реплики в кадре, и подписи. В названии файла — код карточки.</div>
+<h2>Instagram · рилсы <span class="muted">· 35</span></h2>
+<table><thead><tr><th class="check">✓</th><th>Формат</th><th>Тема</th><th>Угол</th><th>Название</th><th class="askcol">Что наговорить</th></tr></thead><tbody>
+<tr><td class="check">☐<div class="sid">R-29</div></td><td class="locked" data-l="Формат">История</td><td class="topic" data-l="Тема">Клиент не пришёл и не написал</td><td class="angle" data-l="Угол">Весь день думаете, что сделали не так</td><td class="" data-l="Название">Молчание клиента</td><td class="ask" data-l="Что наговорить">Расскажите свой случай: клиент не пришёл и не написал. С чего началось, что вы про себя думали в тот день, что сделали дальше и чем кончилось.</td></tr>
+<tr><td class="check">☐<div class="sid">R-05</div></td><td class="locked" data-l="Формат">Техника</td><td class="topic" data-l="Тема">Ревность накрывает без повода</td><td class="angle" data-l="Угол">Три шага до того, как напишете</td><td class="" data-l="Название">Что делать, когда накрыло</td><td class="ask" data-l="Что наговорить">Дайте три шага по порядку — что делать до того, как напишешь. По каждому шагу: что именно сделать и зачем. Так, как объясняете на сессии.</td></tr>
+<tr><td class="check">☐<div class="sid">R-28</div></td><td class="locked" data-l="Формат">История</td><td class="topic" data-l="Тема">Мои клиенты остаются по 4–6 лет</td><td class="angle" data-l="Угол">Как устроен контракт, из-за которого остаются</td><td class="" data-l="Название">Почему остаются надолго</td><td class="ask" data-l="Что наговорить">Расскажите, как устроен ваш контракт с клиентом: о чём договариваетесь на входе, что меняется через год, почему из-за этого остаются на 4–6 лет.</td></tr>
+<tr><td class="check">☐<div class="sid">R-15</div></td><td class="locked" data-l="Формат">Сценка</td><td class="topic" data-l="Тема">Пришла с претензией, ушла виноватой</td><td class="angle" data-l="Угол">Спор был не про факты</td><td class="" data-l="Название">Кто здесь виноват</td><td class="ask" data-l="Что наговорить">Проговорите разговор репликами: что говорит она, что отвечает он и в какой момент она начинает извиняться. Дословно, как это звучит.</td></tr>
+<tr><td class="check">☐<div class="sid">R-18</div></td><td class="locked" data-l="Формат">История</td><td class="topic" data-l="Тема">«Не позорь меня»</td><td class="angle" data-l="Угол">Откуда берётся страх быть заметной</td><td class="" data-l="Название">Чей это голос</td><td class="ask" data-l="Что наговорить">Расскажите на примере, как из «не позорь меня» вырастает страх быть заметной: что звучало в детстве и во что это превращается у взрослой женщины.</td></tr>
+<tr><td class="check">☐<div class="sid">R-32</div></td><td class="locked" data-l="Формат">Сценка</td><td class="topic" data-l="Тема">Третья минута молчания клиента</td><td class="angle" data-l="Угол">Заполнять паузу это ваша тревога</td><td class="" data-l="Название">Пауза на сессии</td><td class="ask" data-l="Что наговорить">Проговорите сценку: третья минута молчания клиента. Что вы чувствуете, что хочется сделать, что делаете вместо этого и почему.</td></tr>
+<tr><td class="check">☐<div class="sid">R-13</div></td><td class="locked" data-l="Формат">Вопрос</td><td class="topic" data-l="Тема">Он бы показал вам эту переписку</td><td class="angle" data-l="Угол">Что считается изменой на самом деле</td><td class="" data-l="Название">Признак один</td><td class="ask" data-l="Что наговорить">Объясните, где для вас проходит граница эмоциональной измены. Дайте один проверочный признак и 2–3 примера по обе стороны границы.</td></tr>
+<tr><td class="check">☐<div class="sid">R-02</div></td><td class="locked" data-l="Формат">Сценка</td><td class="topic" data-l="Тема">Свекровь переставила вещи на кухне</td><td class="angle" data-l="Угол">Так проверяют, чей это дом</td><td class="" data-l="Название">Чей это дом</td><td class="ask" data-l="Что наговорить">Проговорите сценку без узнаваемых деталей: свекровь переставила вещи на кухне. Что она говорит, что отвечает невестка, что на самом деле проверяется.</td></tr>
+<tr><td class="check">☐<div class="sid">R-06</div></td><td class="locked" data-l="Формат">Миф</td><td class="topic" data-l="Тема">Срываетесь на ребёнка, потом ненавидите себя</td><td class="angle" data-l="Угол">Достаточно хорошая мать чинит, а не идеальна</td><td class="" data-l="Название">Достаточно хорошая</td><td class="ask" data-l="Что наговорить">Объясните, что такое «достаточно хорошая мать»: что обычно думают, как на самом деле. И приведите пример починки после срыва — что сказать ребёнку.</td></tr>
+<tr><td class="check">☐<div class="sid">R-27</div></td><td class="locked" data-l="Формат">Вопрос</td><td class="topic" data-l="Тема">Он ушёл, вы ищете, что сделали не так</td><td class="angle" data-l="Угол">Виноватой быть легче, чем беспомощной</td><td class="" data-l="Название">Легче быть виноватой</td><td class="ask" data-l="Что наговорить">Объясните на композитном случае, почему быть виноватой легче, чем беспомощной: что даёт вина и что она прячет.</td></tr>
+<tr><td class="check">☐<div class="sid">R-12</div></td><td class="locked" data-l="Формат">Провокация</td><td class="topic" data-l="Тема">Берёте 1500 ₽ и не можете поднять третий год</td><td class="angle" data-l="Угол">Дешёвая сессия делает вас необязательной</td><td class="" data-l="Название">Цена, которую вы себе разрешаете</td><td class="ask" data-l="Что наговорить">Расскажите свою историю цены: сколько брали в начале, когда и почему подняли, что изменилось после этого у вас и у клиентов.</td></tr>
+<tr><td class="check">☐<div class="sid">R-01</div></td><td class="locked" data-l="Формат">Реакция</td><td class="topic" data-l="Тема">Свекровь звонит мужу каждый вечер</td><td class="angle" data-l="Угол">Долг, который он платит с детства</td><td class="" data-l="Название">Кого он защищает</td><td class="ask" data-l="Что наговорить">Приведите 2–3 реальные фразы, которыми муж оправдывает вечерние звонки матери, и разберите каждую: что за ней стоит.</td></tr>
+<tr><td class="check">☐<div class="sid">R-34</div></td><td class="locked" data-l="Формат">Вопрос</td><td class="topic" data-l="Тема">Клиент говорит, что ничего не меняется</td><td class="angle" data-l="Угол">«Ничего не происходит» это этап, а не провал</td><td class="" data-l="Название">Этап, а не провал</td><td class="ask" data-l="Что наговорить">Ответьте так, как отвечаете клиенту, который говорит «ничего не меняется»: почему это этап, по каким признакам видно, что работа идёт, сколько это длится.</td></tr>
+<tr><td class="check">☐<div class="sid">R-09</div></td><td class="locked" data-l="Формат">Реакция</td><td class="topic" data-l="Тема">Он не кричит, просто молчит три дня</td><td class="angle" data-l="Угол">Молчание это способ управлять</td><td class="" data-l="Название">Три дня тишины</td><td class="ask" data-l="Что наговорить">Опишите 3–4 конкретные бытовые сцены, как выглядит наказание молчанием, и объясните, почему это способ управлять, а не обида.</td></tr>
+<tr><td class="check">☐<div class="sid">R-04</div></td><td class="locked" data-l="Формат">Вопрос</td><td class="topic" data-l="Тема">Партнёр изменяет не первый раз</td><td class="angle" data-l="Угол">Уйти страшнее, чем остаться</td><td class="" data-l="Название">Страшнее уйти</td><td class="ask" data-l="Что наговорить">Объясните своими словами механику возврата после второй измены: почему уйти страшнее, чем остаться, и что держит.</td></tr>
+<tr><td class="check">☐<div class="sid">R-19</div></td><td class="locked" data-l="Формат">История</td><td class="topic" data-l="Тема">Взяли клиента, которого не тянете</td><td class="angle" data-l="Угол">Как выглядит первое честное «мне нужна супервизия»</td><td class="" data-l="Название">Первое честное «не тяну»</td><td class="ask" data-l="Что наговорить">Расскажите свой случай: взяли клиента не по силам. Как поняли, что не тянете, как звучало первое «мне нужна супервизия», что было дальше.</td></tr>
+<tr><td class="check">☐<div class="sid">R-10</div></td><td class="locked" data-l="Формат">История</td><td class="topic" data-l="Тема">Отец никогда не хвалил</td><td class="angle" data-l="Угол">Похвала снаружи не лечит нехватку внутри</td><td class="" data-l="Название">Ничего не радует</td><td class="ask" data-l="Что наговорить">Расскажите композитный случай: человек добился всего и ничего не почувствовал. Что было в детстве, что во взрослом, в какой момент это вскрылось.</td></tr>
+<tr><td class="check">☐<div class="sid">R-14</div></td><td class="locked" data-l="Формат">Вопрос</td><td class="topic" data-l="Тема">Боитесь супервизии, потому что там увидят</td><td class="angle" data-l="Угол">Супервизия не экзамен, а место, где можно не знать</td><td class="" data-l="Название">Место, где можно не знать</td><td class="ask" data-l="Что наговорить">Расскажите, как устроена ваша супервизионная группа: кто там, что происходит на встрече, что там можно не знать — так, чтобы стало не страшно.</td></tr>
+<tr><td class="check">☐<div class="sid">R-16</div></td><td class="locked" data-l="Формат">Реакция</td><td class="topic" data-l="Тема">Медиа-персонаж: сначала особенная, потом всё придумала</td><td class="angle" data-l="Угол">Два человека в одном партнёре за полгода</td><td class="" data-l="Название">Разбор персонажа: два лица</td><td class="ask" data-l="Что наговорить">Разберите на его примере цикл идеализации и обесценивания: что видно снаружи в первой фазе, что во второй, по каким признакам узнаётся переход.</td></tr>
+<tr><td class="check">☐<div class="sid">R-17</div></td><td class="locked" data-l="Формат">Сценка</td><td class="topic" data-l="Тема">Третий тост и вопрос про внуков</td><td class="angle" data-l="Угол">Вашу жизнь считают общей</td><td class="" data-l="Название">Третий тост</td><td class="ask" data-l="Что наговорить">Проговорите 3–4 реплики родни за столом, которые вы слышали от клиенток, дословно — и что стоит за каждой.</td></tr>
+<tr><td class="check">☐<div class="sid">R-33</div></td><td class="locked" data-l="Формат">Разбор</td><td class="topic" data-l="Тема">Кому терапия не подойдёт</td><td class="angle" data-l="Угол">Честно, без «она нужна всем»</td><td class="" data-l="Название">Кому не ко мне</td><td class="ask" data-l="Что наговорить">Разложите честно, кому терапия не подойдёт: назовите 3–4 случая и по каждому скажите, куда такому человеку идти вместо.</td></tr>
+<tr><td class="check">☐<div class="sid">R-25</div></td><td class="locked" data-l="Формат">История</td><td class="topic" data-l="Тема">После родов в доме есть мать, но нет женщины</td><td class="angle" data-l="Угол">Куда девается женщина</td><td class="" data-l="Название">Мать без женщины</td><td class="ask" data-l="Что наговорить">Расскажите, что происходит с женской идентичностью после родов: куда девается женщина, по каким признакам это видно, что с этим делать.</td></tr>
+<tr><td class="check">☐<div class="sid">R-26</div></td><td class="locked" data-l="Формат">Реакция</td><td class="topic" data-l="Тема">Полгода прошло, а вы смотрите его сторис</td><td class="angle" data-l="Угол">Попытка закончить разговор, а не слабость</td><td class="" data-l="Название">Незаконченный разговор</td><td class="ask" data-l="Что наговорить">Объясните, зачем человек смотрит сторис бывшего: что он на самом деле ищет и почему это попытка закончить разговор, а не слабость.</td></tr>
+<tr><td class="check">☐<div class="sid">R-22</div></td><td class="locked" data-l="Формат">Сценка</td><td class="topic" data-l="Тема">Он объясняет, почему это из-за тебя</td><td class="angle" data-l="Угол">Измена всегда решение одного человека</td><td class="" data-l="Название">Ты сама довела</td><td class="ask" data-l="Что наговорить">Проговорите дословно 3–4 формулировки, которыми перекладывают вину за измену, и что отвечать на каждую.</td></tr>
+<tr><td class="check">☐<div class="sid">R-24</div></td><td class="locked" data-l="Формат">Список</td><td class="topic" data-l="Тема">Отучились, а клиентов нет</td><td class="angle" data-l="Угол">Что делать в первый год практики</td><td class="" data-l="Название">Первый год практики</td><td class="ask" data-l="Что наговорить">Перечислите 5 шагов первого года практики и раскройте каждый: что делать конкретно. Без совета «упакуй себя».</td></tr>
+<tr><td class="check">☐<div class="sid">R-08</div></td><td class="locked" data-l="Формат">Инструкция</td><td class="topic" data-l="Тема">Решились пойти к психологу и не знаете, что говорить</td><td class="angle" data-l="Угол">Что происходит на первой встрече</td><td class="" data-l="Название">Первая встреча без мифов</td><td class="ask" data-l="Что наговорить">Разложите первую сессию по шагам: что происходит по порядку, сколько длится, что вы спрашиваете. И отдельно — чего вы там НЕ делаете.</td></tr>
+<tr><td class="check">☐<div class="sid">R-30</div></td><td class="locked" data-l="Формат">Разбор</td><td class="topic" data-l="Тема">Живёте его настроением</td><td class="angle" data-l="Угол">Где в этой погоде вы</td><td class="" data-l="Название">Его погода</td><td class="ask" data-l="Что наговорить">Опишите 3–4 бытовые сцены, по которым видно, что человек живёт настроением партнёра, и объясните, где в этой погоде он сам.</td></tr>
+<tr><td class="check">☐<div class="sid">R-11</div></td><td class="locked" data-l="Формат">Провокация</td><td class="topic" data-l="Тема">Объясняете подруге, что он хороший</td><td class="angle" data-l="Угол">Понимать причину и терпеть последствия разные вещи</td><td class="" data-l="Название">Кому вы объясняете</td><td class="ask" data-l="Что наговорить">Ответьте, чем понимание причины отличается от согласия терпеть: дайте различение и 2 примера, где это путают.</td></tr>
+<tr><td class="check">☐<div class="sid">R-31</div></td><td class="locked" data-l="Формат">История</td><td class="topic" data-l="Тема">Третий партнёр, и в нём всё то же самое</td><td class="angle" data-l="Угол">Повезло трижды одинаково это не везение</td><td class="" data-l="Название">Тот же сценарий</td><td class="ask" data-l="Что наговорить">Объясните на примере механику сценария: почему повторяется тип партнёра. Что человек узнаёт в третьем и что было в первом.</td></tr>
+<tr><td class="check">☐<div class="sid">R-20</div></td><td class="locked" data-l="Формат">Разбор</td><td class="topic" data-l="Тема">Не хочется ничего: ни секса, ни гостей</td><td class="angle" data-l="Угол">Либидо это вкус к жизни</td><td class="" data-l="Название">Вкус к жизни</td><td class="ask" data-l="Что наговорить">Объясните на человеческом языке, что такое либидо как вкус к жизни: как это ощущается, куда пропадает, по каким признакам возвращается.</td></tr>
+<tr><td class="check">☐<div class="sid">R-21</div></td><td class="locked" data-l="Формат">Реакция</td><td class="topic" data-l="Тема">Он выбрал ту, кто «хуже вас»</td><td class="angle" data-l="Угол">Рядом с ней ему проще, а не лучше</td><td class="" data-l="Название">Почему сравнение ранит</td><td class="ask" data-l="Что наговорить">Объясните на случае из практики, почему сравнение с «хуже вас» ранит сильнее: что именно этим задевается.</td></tr>
+<tr><td class="check">☐<div class="sid">R-03</div></td><td class="locked" data-l="Формат">Разбор</td><td class="topic" data-l="Тема">«Я же для тебя всё»</td><td class="angle" data-l="Угол">Вина это счёт, который вам выставили</td><td class="" data-l="Название">Кто выставил счёт</td><td class="ask" data-l="Что наговорить">Приведите 3–4 фразы дословно, как звучит материнская вина в словах ваших клиенток, и разберите, какой счёт за ними выставлен.</td></tr>
+<tr><td class="check">☐<div class="sid">R-23</div></td><td class="locked" data-l="Формат">Разбор</td><td class="topic" data-l="Тема">Пять врачей, анализы хорошие, симптом остался</td><td class="angle" data-l="Угол">Психиатр, психолог, психотерапевт: кто ваш</td><td class="" data-l="Название">К кому идти</td><td class="ask" data-l="Что наговорить">Разложите разницу психиатра, психолога и психотерапевта: кто что делает и к кому с чем идти. И что делать, если анализы хорошие, а симптом остался.</td></tr>
+<tr><td class="check">☐<div class="sid">R-07</div></td><td class="locked" data-l="Формат">Сценка</td><td class="topic" data-l="Тема">В 34 отчитываешься матери, во сколько легла</td><td class="angle" data-l="Угол">Сепарация это не переехать</td><td class="" data-l="Название">Во сколько легла</td><td class="ask" data-l="Что наговорить">Назовите 3–4 бытовые детали, по которым видно несепарированность взрослой дочери, и проговорите их как сцену: что звучит в разговоре с матерью.</td></tr>
+<tr><td class="check">☐<div class="sid">R-35</div></td><td class="locked" data-l="Формат">История</td><td class="topic" data-l="Тема">Набор в группу закрывается сегодня</td><td class="angle" data-l="Угол">Шесть человек, вечер в неделю, старт в понедельник</td><td class="" data-l="Название">Последний день набора</td><td class="ask" data-l="Что наговорить">Проговорите условия набора: формат группы, число мест, даты и старт, для кого она — и для кого нет.</td></tr>
+</tbody></table>
+<h2>Instagram · сторис <span class="muted">· 7</span></h2>
+<div class="note src">Отдельных голосовых не нужно: материал берётся из записей к рилсам выше — одно голосовое раскладывается и в ролик, и в текст. Утвердите темы.</div>
+<table><thead><tr><th class="check">✓</th><th>Формат</th><th>Тема</th></tr></thead><tbody>
+<tr><td class="check">☐<div class="sid">S-01</div></td><td class="locked" data-l="Формат">Опрос</td><td class="topic" data-l="Тема">Узнали себя в истории про мужа и его маму</td></tr>
+<tr><td class="check">☐<div class="sid">S-02</div></td><td class="locked" data-l="Формат">Бэкстейдж</td><td class="topic" data-l="Тема">Как я готовлюсь к сессии: кабинет, записи, тишина</td></tr>
+<tr><td class="check">☐<div class="sid">S-03</div></td><td class="locked" data-l="Формат">Лид-магнит</td><td class="topic" data-l="Тема">Чек-лист: 10 вопросов себе перед походом к психологу</td></tr>
+<tr><td class="check">☐<div class="sid">S-04</div></td><td class="locked" data-l="Формат">Коллаборация</td><td class="topic" data-l="Тема">Совместный эфир с коллегой по супервизионной группе</td></tr>
+<tr><td class="check">☐<div class="sid">S-05</div></td><td class="locked" data-l="Формат">Окно набора</td><td class="topic" data-l="Тема">Группа супервизии: формат, места, три частых возражения</td></tr>
+<tr><td class="check">☐<div class="sid">S-06</div></td><td class="locked" data-l="Формат">Лайф</td><td class="topic" data-l="Тема">Суббота: книга, прогулка, кофе</td></tr>
+<tr><td class="check">☐<div class="sid">S-07</div></td><td class="locked" data-l="Формат">Q&amp;A · рубрика</td><td class="topic" data-l="Тема">„Вопрос-ответ Лучику“: разбор вопросов из директа</td></tr>
+</tbody></table>
+<h2>Instagram · посты <span class="muted">· 3</span></h2>
+<div class="note src">Отдельных голосовых не нужно: материал берётся из записей к рилсам выше — одно голосовое раскладывается и в ролик, и в текст. Утвердите темы.</div>
+<table><thead><tr><th class="check">✓</th><th>Формат</th><th>Тема</th><th>Угол</th></tr></thead><tbody>
+<tr><td class="check">☐<div class="sid">P-01</div></td><td class="locked" data-l="Формат">Карусель · 7</td><td class="topic" data-l="Тема">Развелись, а переписываетесь каждый день</td><td class="angle" data-l="Угол">Три признака, что вы всё ещё в браке</td></tr>
+<tr><td class="check">☐<div class="sid">P-02</div></td><td class="locked" data-l="Формат">Карусель · 6</td><td class="topic" data-l="Тема">Психиатр, психолог, психотерапевт</td><td class="angle" data-l="Угол">Схема навигации, в конце как попасть ко мне</td></tr>
+<tr><td class="check">☐<div class="sid">P-03</div></td><td class="locked" data-l="Формат">Карусель · 6</td><td class="topic" data-l="Тема">Делаете для ребёнка всё, а он не понимает</td><td class="angle" data-l="Угол">Что такое контейнировать на человеческом языке</td></tr>
+</tbody></table>
+<h2>Telegram <span class="muted">· 5</span></h2>
+<div class="note src">Отдельных голосовых не нужно: материал берётся из записей к рилсам выше — одно голосовое раскладывается и в ролик, и в текст. Утвердите темы.</div>
+<table><thead><tr><th class="check">✓</th><th>Формат</th><th>Тема</th></tr></thead><tbody>
+<tr><td class="check">☐<div class="sid">TG-01</div></td><td class="locked" data-l="Формат">Лонгрид</td><td class="topic" data-l="Тема">Несепарированный взрослый: как это выглядит в обычной семье</td></tr>
+<tr><td class="check">☐<div class="sid">TG-02</div></td><td class="locked" data-l="Формат">Лид-магнит</td><td class="topic" data-l="Тема">Чек-лист: 10 вопросов себе перед походом к психологу</td></tr>
+<tr><td class="check">☐<div class="sid">TG-03</div></td><td class="locked" data-l="Формат">Открытие набора</td><td class="topic" data-l="Тема">Группа супервизии: формат, кому подходит, места, дедлайн</td></tr>
+<tr><td class="check">☐<div class="sid">TG-04</div></td><td class="locked" data-l="Формат">Обезличенный кейс</td><td class="topic" data-l="Тема">«Не позорь меня»: как детская фраза становится взрослым страхом</td></tr>
+<tr><td class="check">☐<div class="sid">TG-05</div></td><td class="locked" data-l="Формат">Дожим</td><td class="topic" data-l="Тема">Последний день набора и три возражения, которые слышу чаще всего</td></tr>
+</tbody></table>
+<h2>Threads <span class="muted">· 7</span></h2>
+<div class="note src">Отдельных голосовых не нужно: материал берётся из записей к рилсам выше — одно голосовое раскладывается и в ролик, и в текст. Утвердите темы.</div>
+<table><thead><tr><th class="check">✓</th><th>Формат</th><th>Тема</th></tr></thead><tbody>
+<tr><td class="check">☐<div class="sid">TH-01</div></td><td class="locked" data-l="Формат">Из рилса</td><td class="topic" data-l="Тема">Просьба „поставь её на место“ не срабатывает никогда. Вы просите его выбрать между вами и долгом, который он платит с трёх лет.</td></tr>
+<tr><td class="check">☐<div class="sid">TH-02</div></td><td class="locked" data-l="Формат">Посев хука</td><td class="topic" data-l="Тема">Вина только называется чувством. На самом деле это счёт, который вам когда-то выставили, и вы всё ещё по нему платите.</td></tr>
+<tr><td class="check">☐<div class="sid">TH-03</div></td><td class="locked" data-l="Формат">Для спецов</td><td class="topic" data-l="Тема">Дешёвая сессия не делает вас доступнее. Она делает вас необязательной, и первым это чувствует клиент.</td></tr>
+<tr><td class="check">☐<div class="sid">TH-04</div></td><td class="locked" data-l="Формат">Посев хука</td><td class="topic" data-l="Тема">Если после каждого разговора неправы вы, спор был не про факты.</td></tr>
+<tr><td class="check">☐<div class="sid">TH-05</div></td><td class="locked" data-l="Формат">Набор в группу</td><td class="topic" data-l="Тема">Супервизия не экзамен. Это единственное место в профессии, где можно вслух не знать.</td></tr>
+<tr><td class="check">☐<div class="sid">TH-06</div></td><td class="locked" data-l="Формат">Из рилса</td><td class="topic" data-l="Тема">Либидо гаснет не в постели. Оно гаснет раньше, когда перестаёт хотеться вообще ничего.</td></tr>
+<tr><td class="check">☐<div class="sid">TH-07</div></td><td class="locked" data-l="Формат">Для спецов</td><td class="topic" data-l="Тема">„Ничего не происходит“ это этап терапии, а не её провал. Объясняю, почему клиенты остаются на годы именно после этой фазы.</td></tr>
+</tbody></table>
+<div class="note">В этой версии не показаны Прокладки (24), Саппорт (10) — это механика сетки, она собирается из утверждённых карточек выше и отдельного вашего решения не требует.</div>
+<footer>Карточек на аппрув: 57 из 91 в плане. Голосовых нужно записать: 35.<br>Собрано из <code>plan.yaml</code> (katya-2026-W31) — правки вносятся в него, эта страница пересобирается.</footer>
+</div></body></html>
