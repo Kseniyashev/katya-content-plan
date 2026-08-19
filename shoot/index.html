@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Съёмочный пакет · katya · 2026-W34</title>
+<style>
+:root{--cream:#FDFBF6;--navy:#1F3A5F;--accent:#B9461D;--beige:#F4F0E6;
+--ink:#16181C;--muted:#6B7280;--line:#E4DCCB;--green:#2E7D32;--gold:#C79A2B}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);
+font:15px/1.5 -apple-system,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;line-height:1.2;margin:0 0 6px;color:var(--navy)}
+.sub{color:var(--muted);font-size:14px;margin-bottom:22px}
+.badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:12px;
+background:var(--beige);color:var(--navy);margin-right:6px}
+.badge.warn{background:#FBEEE7;color:var(--accent)}
+.note{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);
+border-radius:0 8px 8px 0;padding:12px 16px;margin:18px 0;font-size:14px}
+.note b{color:var(--navy)}
+h2{font-size:18px;color:var(--navy);margin:30px 0 10px;padding-top:14px;
+border-top:2px solid var(--navy)}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:13.5px}
+th{background:var(--beige);color:var(--navy);text-align:left;font-weight:600;
+padding:8px 10px;border:1px solid var(--line);font-size:12.5px}
+td{padding:9px 10px;border:1px solid var(--line);vertical-align:top}
+tr.daystart td{border-top:2px solid var(--navy)}
+.dt{white-space:nowrap;color:var(--muted);font-size:12.5px}
+.topic{font-weight:600}
+.angle{color:#3d4450}
+.ask{background:#FAF7F0;font-size:13.5px;line-height:1.45}
+.ask.have{background:#EDF6ED;color:var(--green)}
+.askcol{width:38%}
+.sid{font-size:10px;color:var(--muted);margin-top:3px;letter-spacing:.02em}
+.note.src{border-left-color:var(--muted);font-size:13px}
+.card.shot{flex:1 1 100%;margin:14px 0;padding:0;overflow:hidden}
+.cardhead{background:var(--navy);color:#fff;padding:10px 14px;font-size:15px}
+.cardhead b{margin-right:8px}
+.sid2{font-family:"SF Mono",Menlo,monospace;font-size:12px;opacity:.75;margin-right:8px}
+.meta2{float:right;font-size:12px;opacity:.8;font-weight:400}
+.setup{padding:12px 14px;background:#F7F9FB;border-bottom:1px solid var(--line);font-size:13.5px}
+.srow{display:flex;gap:10px;margin:5px 0;align-items:baseline}
+.skey{flex:0 0 132px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+ul.mv{margin:0;padding-left:16px}
+ul.mv li{margin:2px 0}
+@media (max-width:760px){.srow{display:block}.skey{display:block;margin-bottom:2px}}
+.stake{padding:10px 14px;background:#FAF7F0;font-size:13.5px;border-bottom:1px solid var(--line)}
+.hookbox{padding:12px 14px;background:#FBEEE7;border-bottom:1px solid var(--line)}
+.lbl{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:4px}
+.hooktxt{font-size:19px;font-weight:700;color:var(--accent);line-height:1.3}
+table.beats{font-size:13.5px;margin:0}
+table.beats th{font-size:11.5px}
+table.beats td{border-left:none;border-right:none}
+table.beats tr.turn td{background:#FDF4F0}
+table.beats tr.turn .act{font-weight:600;color:var(--accent)}
+td.act{width:32%;color:#3d4450}
+td.line{font-size:15px;line-height:1.45}
+.takes{padding:10px 14px;border-top:1px solid var(--line);font-size:13.5px}
+.takes ol{margin:4px 0 0;padding-left:20px}
+.takes li{margin:3px 0}
+.props{padding:10px 14px;border-top:1px solid var(--line);font-size:13.5px;background:#FAFAF7}
+.card.shot .note{margin:0;border-radius:0;border-top:1px solid var(--line);border-left:3px solid var(--gold)}
+@media print{.card.shot{page-break-inside:avoid}.cardhead{background:#1F3A5F !important;-webkit-print-color-adjust:exact}}
+@media (max-width:760px){
+  td.act{width:auto}
+  table.beats,table.beats tbody,table.beats tr,table.beats td{display:block;width:100%}
+  table.beats thead{display:none}
+  table.beats tr{border-bottom:1px solid var(--line);padding:8px 12px;margin:0;border-radius:0}
+  table.beats td{padding:2px 0;border:none}
+  .meta2{float:none;display:block;margin-top:3px}
+}
+.briefs{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
+.brief{flex:1 1 300px;background:#fff;border:1px solid var(--line);border-radius:8px;
+  padding:12px 14px;font-size:13.5px;line-height:1.45}
+.bttl{font-weight:700;color:var(--navy);margin-bottom:4px}
+@media (max-width:760px){.brief{flex:1 1 100%}}
+.locked{color:var(--muted);font-size:12.5px;white-space:nowrap}
+/* Ширины «Темы» и «Угла» заданы явно, иначе браузер делит место по объёму
+   текста, а в заданиях текста больше всего. */
+td.topic{min-width:150px}
+td.angle{min-width:150px}
+@media (max-width:760px){td.topic,td.angle{width:auto;min-width:0}}
+.job{display:inline-block;padding:1px 7px;border-radius:12px;font-size:11.5px;
+background:var(--beige);color:var(--navy)}
+.check{width:52px;text-align:center;color:var(--line);font-size:17px;white-space:nowrap}
+h3{font-size:14px;color:var(--navy);margin:0 0 8px}
+.cards{display:flex;flex-wrap:wrap;gap:14px;margin:14px 0;align-items:flex-start}
+.card{flex:1 1 250px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+.card .note{margin:10px 0 0;font-size:12.5px;padding:8px 10px}
+table.mini{font-size:13px}
+table.mini td{border:none;border-bottom:1px solid var(--beige);padding:4px 0}
+.num{text-align:right;white-space:nowrap}
+.muted{color:var(--muted);font-weight:400}
+.caps{display:flex;flex-wrap:wrap;gap:14px;margin:14px 0}
+.cap{flex:1 1 220px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:13.5px}
+.cap.over{border-color:var(--accent);background:#FDF4F0}
+.capttl{font-weight:600;color:var(--navy);margin-bottom:6px;font-size:13px}
+.verdict{padding:10px 14px;border-radius:8px;font-size:14px;font-weight:600;margin:6px 0 4px}
+.verdict.ok{background:#EDF6ED;color:var(--green)}
+.verdict.bad{background:#FBEEE7;color:var(--accent)}
+.warn{color:var(--accent)}
+.note.warn{border-left-color:var(--accent)}
+.scroll{overflow-x:auto}
+.scroll table{min-width:100%}
+.scroll td{vertical-align:top}
+.scroll td[data-l="От эксперта"]{min-width:250px}
+.scroll td[data-l="Тема и угол"],.scroll td[data-l="Тема"]{min-width:220px}
+footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);
+color:var(--muted);font-size:12.5px}
+@media print{body{background:#fff}.wrap{max-width:none;padding:0}
+  tr{page-break-inside:avoid}h2{page-break-after:avoid}}
+
+/* ─── Вкладки. Системная версия несёт два разных вопроса: «что в канале» и
+   «что выходит в четверг». Раньше они лежали в одной простыне, и второй
+   не отвечался вовсе — календарь приходилось собирать в голове. ─── */
+.tabs{position:sticky;top:0;z-index:5;display:flex;gap:6px;margin:18px 0 0;
+  padding:8px 0;background:var(--cream);border-bottom:1px solid var(--line)}
+.tabbtn{appearance:none;border:1px solid var(--line);background:#fff;color:var(--navy);
+  font:600 13.5px/1 inherit;padding:9px 16px;border-radius:8px;cursor:pointer}
+.tabbtn:hover{border-color:var(--navy)}
+.tabbtn.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.tabpane{display:none}
+.tabpane.on{display:block}
+@media print{.tabs{display:none}.tabpane{display:block !important}}
+
+/* ─── Раскрывающееся задание эксперту. Текст «что наговорить» длинный по
+   построению (§4 схемы: глагол + форма + количество + что раскрыть), и в
+   ячейке таблицы он раздувал строку так, что остальные поля переставали
+   читаться. Свёрнут по умолчанию, развёрнут по клику. ─── */
+details.ask{font-size:13px}
+details.ask>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;
+  gap:6px;padding:4px 10px;border:1px solid var(--line);border-radius:14px;
+  background:#FAF7F0;color:var(--navy);font-weight:600;font-size:12px;white-space:nowrap}
+details.ask>summary::-webkit-details-marker{display:none}
+details.ask>summary::before{content:"▸";font-size:11px;color:var(--muted)}
+details.ask[open]>summary::before{content:"▾"}
+details.ask>summary:hover{border-color:var(--navy)}
+details.ask>div{margin-top:8px;padding:10px 12px;background:#FAF7F0;
+  border-radius:8px;line-height:1.5;min-width:230px;max-width:460px}
+details.ask.have>summary{background:#EDF6ED;color:var(--green);border-color:#CFE6CF}
+details.ask.have>div{background:#EDF6ED}
+@media print{details.ask>div{display:block !important;max-width:none}}
+
+/* ─── Бейджи каналов: в сводном плане строки разных каналов идут вперемешку,
+   и канал должен читаться боковым зрением, а не вычитываться. ─── */
+.ch{display:inline-block;padding:2px 9px;border-radius:12px;font-size:11.5px;
+  font-weight:600;white-space:nowrap;border:1px solid transparent}
+.ch.reel{background:#EDE7F6;color:#4527A0}
+.ch.story{background:#FFF3E0;color:#B9461D}
+.ch.post{background:#E3F2FD;color:#0D47A1}
+.ch.tg{background:#E0F2F1;color:#00695C}
+.ch.th{background:#F3E5F5;color:#6A1B9A}
+.ch.pr,.ch.sup{background:var(--beige);color:var(--navy)}
+.tag{display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;
+  background:var(--beige);color:var(--navy);white-space:nowrap;margin:0 3px 3px 0}
+.tag.pin{background:#E3F2FD;color:#0D47A1}
+.tag.hl{background:#FFF3E0;color:#B9461D}
+.tag.rec{background:#FBEEE7;color:var(--accent);font-weight:600}
+.tag.ok{background:#EDF6ED;color:var(--green)}
+
+/* ─── Сводный план: день как блок, а не как строка таблицы. ─── */
+.day{background:#fff;border:1px solid var(--line);border-radius:10px;
+  margin:0 0 14px;overflow:hidden}
+.dayhead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+  padding:10px 14px;background:var(--beige);border-bottom:1px solid var(--line)}
+.dayhead b{color:var(--navy);font-size:15px}
+.dayhead .muted{font-size:12.5px}
+.day table{border:none}
+.day td{border-left:none;border-right:none;border-top:none;
+  border-bottom:1px solid var(--beige);vertical-align:top}
+.day tr:last-child td{border-bottom:none}
+td.tm{white-space:nowrap;color:var(--muted);font-size:12.5px;width:66px}
+td.tm b{display:block;color:var(--ink);font-size:13.5px}
+td.what .tags{margin-top:6px;line-height:1}
+td.chc{width:92px}
+td.what b{color:var(--ink)}
+td.what .sub{color:var(--muted);font-size:12.5px;margin-top:2px}
+.ax{display:flex;gap:6px;align-items:baseline;margin:0 0 5px;line-height:1}
+.ax:last-child{margin-bottom:0}
+.axk{flex:0 0 54px;font-size:9.5px;text-transform:uppercase;letter-spacing:.04em;
+  color:var(--muted);padding-top:2px}
+.ax .tag,.ax .job{margin:0 3px 0 0}
+details.note.why{padding:0;border-left-width:3px}
+details.note.why>summary{cursor:pointer;list-style:none;display:inline-flex;
+  align-items:center;gap:6px;padding:10px 16px;font-weight:600;color:var(--navy);
+  font-size:13px}
+details.note.why>summary::-webkit-details-marker{display:none}
+details.note.why>summary::before{content:"▸";color:var(--muted);font-size:11px}
+details.note.why[open]>summary::before{content:"▾"}
+details.note.why>div{padding:0 16px 12px;font-size:13.5px;line-height:1.5}
+@media print{details.note.why>div{display:block !important}}
+.axes-key{margin:14px 0 6px}
+.axes-key>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;
+  gap:6px;font-size:13px;font-weight:600;color:var(--navy);padding:6px 12px;
+  border:1px solid var(--line);border-radius:8px;background:#fff}
+.axes-key>summary::-webkit-details-marker{display:none}
+.axes-key>summary::before{content:"▸";color:var(--muted)}
+.axes-key[open]>summary::before{content:"▾"}
+.axes-key table{margin-top:10px;font-size:13px}
+.axes-key td:first-child{width:120px;white-space:nowrap;color:var(--navy);font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 18px;font-size:12.5px;
+  color:var(--muted);align-items:center;line-height:1}
+.empty{padding:12px 14px;color:var(--muted);font-size:13px}
+@media (max-width:760px){
+  .day table,.day tbody,.day tr,.day td{display:block;width:100%}
+  .day tr{border:none;border-bottom:1px solid var(--beige);border-radius:0;
+    margin:0;padding:10px 12px;background:#fff}
+  .day td{padding:2px 0}
+  td.tm,td.chc{width:auto;display:inline-block;margin-right:8px}
+}
+/* Телефон: строка таблицы разворачивается в карточку. Эксперт открывает эту
+   страницу там же, где записывает голосовые, а пять колонок в 375 px не влезают. */
+@media (max-width:760px){
+  .wrap{padding:18px 12px 40px}
+  table,thead,tbody,tr,td{display:block;width:100%}
+  thead{display:none}
+  tr{background:#fff;border:1px solid var(--line);border-radius:10px;
+     margin:0 0 12px;padding:10px 12px;position:relative}
+  tr.daystart{border-top:1px solid var(--line)}
+  td{border:none;padding:4px 0 4px 0}
+  td:empty{display:none}
+  td[data-l]::before{content:attr(data-l);display:block;font-size:11px;
+    text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:1px}
+  td.topic{font-size:16px;font-weight:600}
+  td.ask{background:var(--beige);border-radius:8px;padding:10px 12px;margin-top:6px}
+  .check{position:absolute;top:10px;right:12px;width:auto;text-align:right}
+  .askcol{width:auto}
+}
+</style></head><body>
+<div class="wrap">
+<h1>Съёмочный пакет</h1>
+<div class="sub">неделя 17.08 — 23.08<br><span class="badge">съёмка 15.08</span></div>
+<div class="note warn"><b>Это ЧАСТЬ недели.</b> Снимаем 7 слотов из 17 — те, на которые уже есть ваши голосовые. Остальные 10 ждут записи и будут сниматься отдельно: S-01, S-02, S-03, S-04, P-01, P-02, P-03, TG-01, TG-02, TG-03.</div>
+<div class="note"><b>Как этим пользоваться.</b> Порядок ниже — <b>порядок съёмки</b>, а не порядок выхода: слоты сгруппированы так, чтобы не переставлять свет и не менять образ лишний раз. Календарь публикаций — в конце страницы.<br><br>В карточке дословны только <b>хук</b>, цифры и названия. Всё остальное — ваши же слова из голосовых, но говорите живьём, а не читайте: реплика нужна как опора, не как суфлёр. Сбились — это нормально, снимем дубль.</div>
+<h2>точка 1 · стена (сидя, по грудь) <span class="muted">· 2</span></h2>
+<div class="card shot">
+<div class="cardhead"><span class="sid2">R-02</span> <b>Один и тот же сценарий</b><span class="meta2">Список · 55 сек · сложность лёгкая</span></div>
+<div class="stake"><b>Ради чего этот ролик.</b> Повторяющийся сценарий видно не через полгода отношений, а ещё до первого свидания — по тому, как человек к нему готовится.</div>
+<div class="hookbox"><div class="lbl">Хук — дословно, первые секунды</div><div class="hooktxt">«Каждый раз новый человек — и каждый раз один и тот же финал.»</div></div>
+<div class="setup"><div class="lbl">Постановка — одна на весь ролик</div>
+<div class="srow"><span class="skey">Как стоите / сидите</span>Сидя, корпус к камере, руки свободно.</div>
+<div class="srow"><span class="skey">Кадр</span>По грудь.</div>
+<div class="srow"><span class="skey">Фон</span>Однотонная светлая стена.</div>
+<div class="srow"><span class="skey">Движения</span><ul class="mv"><li>Признаки перечисляются на пальцах или сменой плана, чтобы их было видно как три отдельных.</li></ul></div>
+</div>
+<table class="beats"><thead><tr><th>Сек</th><th>Что говорите</th></tr></thead><tbody>
+<tr class=""><td class="tm">0-8</td><td class="line">Повторяющийся сценарий можно заметить ещё до свидания.</td></tr>
+<tr class=""><td class="tm">8-20</td><td class="line">Ты готовишься к нему, как будто идёшь на экзамен. Фокус не на том, насколько тебе будет хорошо и интересно с этим человеком, а на том, как он оценит, как ты выглядишь и где работаешь.</td></tr>
+<tr class=""><td class="tm">20-33</td><td class="line">После первой встречи ты говоришь: в нём сразу же было что-то родное. Но что-то родное не всегда значит подходящее. Иногда родное — это просто что-то очень знакомое и безопасное.</td></tr>
+<tr class=""><td class="tm">33-44</td><td class="line">И третье. После первой встречи ты уже как будто всё поняла про этого человека: это мой человек, между нами что-то особенное. А виделись вы один раз.</td></tr>
+<tr class="turn"><td class="tm">44-55</td><td class="line">И вот вопрос: насколько ты в этот момент интересуешься другим человеком, а насколько уже пытаешься встроить его в знакомую тебе историю. Потому что новый опыт всегда требует выдерживать неопределённость.</td></tr>
+</tbody></table>
+<div class="takes"><div class="lbl">Дубли хука — снять подряд, с той же точки, сразу после основного</div><ol>
+<li>«Каждый раз новый человек — и каждый раз один и тот же финал.»</li>
+<li>«Сценарий видно ещё до первого свидания.»</li>
+</ol></div>
+</div>
+<div class="card shot">
+<div class="cardhead"><span class="sid2">R-07</span> <b>Когда говорит тело</b><span class="meta2">Объяснение механизма · 50 сек · сложность лёгкая</span></div>
+<div class="stake"><b>Ради чего этот ролик.</b> Человек ходит по врачам с чистыми анализами, потому что напряжение, которое психика больше не перерабатывает, забирает на себя тело.</div>
+<div class="hookbox"><div class="lbl">Хук — дословно, первые секунды</div><div class="hooktxt">«Анализы чистые. Тело всё равно в режиме тревоги.»</div></div>
+<div class="setup"><div class="lbl">Постановка — одна на весь ролик</div>
+<div class="srow"><span class="skey">Как стоите / сидите</span>Сидя, корпус к камере, руки на коленях.</div>
+<div class="srow"><span class="skey">Кадр</span>По грудь.</div>
+<div class="srow"><span class="skey">Фон</span>Однотонная светлая стена.</div>
+<div class="srow"><span class="skey">Движения</span><ul class="mv"><li>Говорите как на приёме: перечень симптомов не зачитывается списком, а называется по одному.</li></ul></div>
+</div>
+<table class="beats"><thead><tr><th>Сек</th><th>Что говорите</th></tr></thead><tbody>
+<tr class=""><td class="tm">0-10</td><td class="line">Очень часто в кабинете мы слышим о том, что человек сталкивается с непривычными ему ранее телесными симптомами.</td></tr>
+<tr class=""><td class="tm">10-20</td><td class="line">Невозможность расслабиться, повышенное сердцебиение, боль в голове, невозможность отойти ко сну, тревожный сон.</td></tr>
+<tr class=""><td class="tm">20-30</td><td class="line">Всё это говорит нам о том, что психика испытывает перенапряжение и привычные способы защиты и переработки переживаний больше не работают.</td></tr>
+<tr class="turn"><td class="tm">30-40</td><td class="line">Такие защиты, как рационализация, контроль, расщепление, больше не поддерживают. И тело начинает забирать на себя напряжение.</td></tr>
+<tr class=""><td class="tm">40-50</td><td class="line">И одновременно тело помогает своему владельцу услышать то, что он, возможно, давно не замечал: изменить способ мышления, действия, значимые отношения.</td></tr>
+</tbody></table>
+<div class="takes"><div class="lbl">Дубли хука — снять подряд, с той же точки, сразу после основного</div><ol>
+<li>«Анализы чистые. Тело всё равно в режиме тревоги.»</li>
+<li>«Тело забирает на себя то, что психика больше не тянет.»</li>
+</ol></div>
+</div>
+<h2>точка 1 · стена (стоя, по грудь) <span class="muted">· 5</span></h2>
+<div class="card shot">
+<div class="cardhead"><span class="sid2">R-01</span> <b>Проверка, которая не успокаивает</b><span class="meta2">Сценка · 55 сек · сложность средняя</span></div>
+<div class="stake"><b>Ради чего этот ролик.</b> Человек проверяет партнёра, чтобы стало спокойнее, и каждой проверкой отодвигает от себя ту самую близость, ради которой всё и затевалось.</div>
+<div class="hookbox"><div class="lbl">Хук — дословно, первые секунды</div><div class="hooktxt">«Вы проверяете его переписку. Спокойнее не становится.»</div></div>
+<div class="setup"><div class="lbl">Постановка — одна на весь ролик</div>
+<div class="srow"><span class="skey">Как стоите / сидите</span>Стоя у стены, по грудь. Реплики за двоих играете сменой позы и интонации, поворотом головы: она чуть вперёд, он чуть назад.</div>
+<div class="srow"><span class="skey">Кадр</span>По грудь, камера на уровне глаз.</div>
+<div class="srow"><span class="skey">Фон</span>Однотонная светлая стена, в кадре пусто.</div>
+<div class="srow"><span class="skey">Движения</span><ul class="mv"><li>Диалог идёт без пауз на монтаж: это один непрерывный разговор.</li><li>На разборе разворот к камере фронтально, темп ниже.</li></ul></div>
+</div>
+<table class="beats"><thead><tr><th>Сек</th><th>Что говорите</th></tr></thead><tbody>
+<tr class=""><td class="tm">0-4</td><td class="line">Привет, дорогой. Почему ты целый день не выходишь на связь?</td></tr>
+<tr class=""><td class="tm">4-7</td><td class="line">Привет. Я просто работал.</td></tr>
+<tr class=""><td class="tm">7-11</td><td class="line">И за целый день ты не нашёл возможности написать?</td></tr>
+<tr class=""><td class="tm">11-16</td><td class="line">Я просто хотел освободиться пораньше, чтобы приехать домой.</td></tr>
+<tr class=""><td class="tm">16-20</td><td class="line">Ага, домой. Не придумывай.</td></tr>
+<tr class=""><td class="tm">20-23</td><td class="line">А зачем мне что-то придумывать?</td></tr>
+<tr class=""><td class="tm">23-29</td><td class="line">Да потому что я прекрасно понимаю, что там тебе гораздо интереснее, чем со мной.</td></tr>
+<tr class=""><td class="tm">29-33</td><td class="line">Я вообще после этого не хочу с тобой разговаривать.</td></tr>
+<tr class="turn"><td class="tm">33-37</td><td class="line">Конечно. И теперь даже не пытайся доказать мне, что у тебя никого нет.</td></tr>
+<tr class=""><td class="tm">37-44</td><td class="line">Здесь на партнёра проецируется фантазия о ком-то третьем. О том, что есть обязательно кто-то, кого предпочтут тебе: более привлекательный, более важный, более желанный.</td></tr>
+<tr class=""><td class="tm">44-50</td><td class="line">Эта фантазия поднимает очень много тревоги, и тогда появляется желание контролировать. Но контроль не успокаивает: тревоги становится всё больше, а удовлетворённости всё меньше.</td></tr>
+<tr class=""><td class="tm">50-55</td><td class="line">А партнёр переживает это как нападение и выставляет ещё большую стену. И оба остаются с одним и тем же чувством: меня не слышат, меня не понимают.</td></tr>
+</tbody></table>
+<div class="takes"><div class="lbl">Дубли хука — снять подряд, с той же точки, сразу после основного</div><ol>
+<li>«Вы проверяете его переписку. Спокойнее не становится.»</li>
+<li>«Он не ответил три часа. Вы уже знаете почему.»</li>
+</ol></div>
+</div>
+<div class="card shot">
+<div class="cardhead"><span class="sid2">R-03</span> <b>Чей это голос</b><span class="meta2">Разбор персонажа · 55 сек · сложность средняя</span></div>
+<div class="stake"><b>Ради чего этот ролик.</b> Человек считает внутреннюю критику своей оценкой себя, хотя это записанный чужой голос.</div>
+<div class="hookbox"><div class="lbl">Хук — дословно, первые секунды</div><div class="hooktxt">«Вы критикуете себя — но слова не ваши. Они мамины.»</div></div>
+<div class="setup"><div class="lbl">Постановка — одна на весь ролик</div>
+<div class="srow"><span class="skey">Как стоите / сидите</span>Стоя у стены. Реплики критикующего голоса произносятся в сторону, разбор — прямо в камеру.</div>
+<div class="srow"><span class="skey">Кадр</span>По грудь.</div>
+<div class="srow"><span class="skey">Фон</span>Однотонная светлая стена.</div>
+<div class="srow"><span class="skey">Движения</span><ul class="mv"><li>Между репликами критика и разбором сменить положение головы: это два разных голоса.</li></ul></div>
+</div>
+<table class="beats"><thead><tr><th>Сек</th><th>Что говорите</th></tr></thead><tbody>
+<tr class=""><td class="tm">0-7</td><td class="line">У тебя не получится.</td></tr>
+<tr class=""><td class="tm">7-14</td><td class="line">Посмотри на себя, как ты выглядишь.</td></tr>
+<tr class=""><td class="tm">14-22</td><td class="line">Как тебе не стыдно? Это никому не интересно.</td></tr>
+<tr class="turn"><td class="tm">22-34</td><td class="line">Внутренний голос — это всегда голос наших внутренних объектов.</td></tr>
+<tr class=""><td class="tm">34-47</td><td class="line">Когда мы рождаемся, мы довольно пусты. Наполняют нас именно те люди, которые рядом, и то, как они себя проявляют. Впоследствии это буквально становится психическим материалом.</td></tr>
+<tr class=""><td class="tm">47-55</td><td class="line">Поэтому то, что звучит внутри как ваша оценка себя, — это то, что вы впитывали на очень ранних этапах своего развития.</td></tr>
+</tbody></table>
+<div class="takes"><div class="lbl">Дубли хука — снять подряд, с той же точки, сразу после основного</div><ol>
+<li>«Вы критикуете себя — но слова не ваши. Они мамины.»</li>
+<li>«Этот голос внутри вам не принадлежит.»</li>
+</ol></div>
+</div>
+<div class="card shot">
+<div class="cardhead"><span class="sid2">R-04</span> <b>Одиночество вдвоём</b><span class="meta2">Сценка · 55 сек · сложность средняя</span></div>
+<div class="stake"><b>Ради чего этот ролик.</b> Пара молчит друг о друге из заботы, и именно из заботы вырастает одиночество вдвоём.</div>
+<div class="hookbox"><div class="lbl">Хук — дословно, первые секунды</div><div class="hooktxt">«Чувство одиночества в отношениях»</div></div>
+<div class="setup"><div class="lbl">Постановка — одна на весь ролик</div>
+<div class="srow"><span class="skey">Как стоите / сидите</span>Стоя у стены. Мысли героев произносятся в сторону, разбор — в камеру.</div>
+<div class="srow"><span class="skey">Кадр</span>По грудь.</div>
+<div class="srow"><span class="skey">Фон</span>Однотонная светлая стена.</div>
+<div class="srow"><span class="skey">Движения</span><ul class="mv"><li>Две мысли подряд — это два разных человека за одним столом; развернуть корпус между ними.</li></ul></div>
+</div>
+<table class="beats"><thead><tr><th>Сек</th><th>Что говорите</th></tr></thead><tbody>
+<tr class=""><td class="tm">0-11</td><td class="line">Как же мне хочется прогуляться с тобой сегодня. Но я не предложу, потому что ты, наверное, устал.</td></tr>
+<tr class=""><td class="tm">11-21</td><td class="line">Как же мне хотелось бы поговорить о нашем отпуске. Но я не буду: мы много денег потратили на нужды ребёнка.</td></tr>
+<tr class=""><td class="tm">21-29</td><td class="line">А вслух разговор снова о продуктах, о том, какие закупки сделать, о ребёнке. И так друг о друге они не поговорили.</td></tr>
+<tr class="turn"><td class="tm">29-40</td><td class="line">Каждый молчит из заботы: у меня проблемы, да, ты мне нужен, но, наверное, ты устал. И из этой заботы начинается постепенное отдаление.</td></tr>
+<tr class=""><td class="tm">40-48</td><td class="line">У неё копятся обиды, потому что он не слышит, а она не говорит. У него чувство, что его не понимают.</td></tr>
+<tr class=""><td class="tm">48-55</td><td class="line">И есть вторая причина молчать: если в семье не разговаривали и примера не было, для человека это норма. Нет примера — нет опыта, и делиться чувствами становится просто небезопасно.</td></tr>
+</tbody></table>
+<div class="takes"><div class="lbl">Дубли хука — снять подряд, с той же точки, сразу после основного</div><ol>
+<li>«Чувство одиночества в отношениях»</li>
+<li>«Вы весь вечер вдвоём и весь вечер поодиночке.»</li>
+</ol></div>
+</div>
+<div class="card shot">
+<div class="cardhead"><span class="sid2">R-05</span> <b>Когда дело не в еде</b><span class="meta2">Сценка · 55 сек · сложность средняя</span></div>
+<div class="stake"><b>Ради чего этот ролик.</b> Человек ищет ответ, почему он ест, а единого ответа нет: еда закрывает ту потребность, которую не научились различать.</div>
+<div class="hookbox"><div class="lbl">Хук — дословно, первые секунды</div><div class="hooktxt">«Вы переедаете — и потом вините себя за это.»</div></div>
+<div class="setup"><div class="lbl">Постановка — одна на весь ролик</div>
+<div class="srow"><span class="skey">Как стоите / сидите</span>Стоя у стены. Реплики младенца произносятся в сторону, разбор — в камеру.</div>
+<div class="srow"><span class="skey">Кадр</span>По грудь.</div>
+<div class="srow"><span class="skey">Фон</span>Однотонная светлая стена.</div>
+<div class="srow"><span class="skey">Движения</span><ul class="mv"><li>Четыре «плача» идут подряд одним темпом — на повторе держится вся сцена, резать её нельзя.</li></ul></div>
+</div>
+<table class="beats"><thead><tr><th>Сек</th><th>Что говорите</th></tr></thead><tbody>
+<tr class=""><td class="tm">0-10</td><td class="line">Представляем: младенец плачет. Мама, мне холодно! Ему соску.</td></tr>
+<tr class=""><td class="tm">10-19</td><td class="line">Мама, я хочу есть! Ему соску. Мама, мне одиноко и страшно! Ему вставляют соску.</td></tr>
+<tr class="turn"><td class="tm">19-27</td><td class="line">В каком-то смысле это то же самое, что человек во взрослом возрасте может делать с едой.</td></tr>
+<tr class=""><td class="tm">27-40</td><td class="line">Мне одиноко — открою холодильник. Я дико злюсь на начальника и не могу эту злость отразить — открываю холодильник. Партнёр не ответил, не подарил подарок — идём к холодильнику.</td></tr>
+<tr class=""><td class="tm">40-48</td><td class="line">Это сбой в понимании и контакте со своими потребностями.</td></tr>
+<tr class=""><td class="tm">48-55</td><td class="line">Поэтому одного ответа для всех здесь нет. Надо взращивать внимательную внутреннюю мать.</td></tr>
+</tbody></table>
+<div class="takes"><div class="lbl">Дубли хука — снять подряд, с той же точки, сразу после основного</div><ol>
+<li>«Вы переедаете — и потом вините себя за это.»</li>
+<li>«Младенец плачет, и ему каждый раз дают одну и ту же соску.»</li>
+</ol></div>
+</div>
+<div class="card shot">
+<div class="cardhead"><span class="sid2">R-06</span> <b>Со мной что-то не так</b><span class="meta2">Сценка · 55 сек · сложность средняя</span></div>
+<div class="stake"><b>Ради чего этот ролик.</b> Внутренний критик кажется врагом, но человек держится за него, потому что боится обнаружить на его месте пустоту.</div>
+<div class="hookbox"><div class="lbl">Хук — дословно, первые секунды</div><div class="hooktxt">«Со мной что-то не так. Будто я бракованная — и без причины.»</div></div>
+<div class="setup"><div class="lbl">Постановка — одна на весь ролик</div>
+<div class="srow"><span class="skey">Как стоите / сидите</span>Стоя у стены, взгляд не в камеру на монологе и прямо в камеру на повороте.</div>
+<div class="srow"><span class="skey">Кадр</span>По грудь.</div>
+<div class="srow"><span class="skey">Фон</span>Однотонная светлая стена.</div>
+<div class="srow"><span class="skey">Движения</span><ul class="mv"><li>Первые фразы идут обрывочно, без пауз на монтаж: так думают на самом деле.</li></ul></div>
+</div>
+<table class="beats"><thead><tr><th>Сек</th><th>Что говорите</th></tr></thead><tbody>
+<tr class=""><td class="tm">0-10</td><td class="line">Со мной что-то не так. Я, конечно же, опять оплошаю.</td></tr>
+<tr class=""><td class="tm">10-19</td><td class="line">Она мне точно никогда не напишет. Она меня никогда не выберет.</td></tr>
+<tr class=""><td class="tm">19-27</td><td class="line">Я никогда не стану достаточно хорошей. Им на меня всё равно. Ты уже опоздал.</td></tr>
+<tr class="turn"><td class="tm">27-39</td><td class="line">Представь, что однажды этот голос замолчал. Совсем. Никто больше не следит, никто не оценивает, никому внутри тебя больше ничего не надо доказывать.</td></tr>
+<tr class=""><td class="tm">39-46</td><td class="line">И с кем ты тогда останешься?</td></tr>
+<tr class=""><td class="tm">46-55</td><td class="line">Потому что иногда гораздо страшнее жить с плохим внутренним объектом, чем обнаружить пустое место там, где всю жизнь кто-то был.</td></tr>
+</tbody></table>
+<div class="takes"><div class="lbl">Дубли хука — снять подряд, с той же точки, сразу после основного</div><ol>
+<li>«Со мной что-то не так. Будто я бракованная — и без причины.»</li>
+<li>«Представьте, что этот голос внутри замолчал. Совсем.»</li>
+</ol></div>
+</div>
+<h2>Когда это выходит</h2>
+<table><thead><tr><th>Дата</th><th>Время</th><th>ID</th><th>Название</th></tr></thead><tbody>
+<tr><td class="dt">17.08 пн</td><td class="tm">08:30</td><td class="sid2">R-01</td><td>Проверка, которая не успокаивает</td></tr>
+<tr><td class="dt">18.08 вт</td><td class="tm">08:30</td><td class="sid2">R-02</td><td>Один и тот же сценарий</td></tr>
+<tr><td class="dt">19.08 ср</td><td class="tm">08:30</td><td class="sid2">R-03</td><td>Чей это голос</td></tr>
+<tr><td class="dt">20.08 чт</td><td class="tm">08:30</td><td class="sid2">R-04</td><td>Одиночество вдвоём</td></tr>
+<tr><td class="dt">21.08 пт</td><td class="tm">08:30</td><td class="sid2">R-05</td><td>Когда дело не в еде</td></tr>
+<tr><td class="dt">22.08 сб</td><td class="tm">10:00</td><td class="sid2">R-06</td><td>Со мной что-то не так</td></tr>
+<tr><td class="dt">23.08 вс</td><td class="tm">11:00</td><td class="sid2">R-07</td><td>Когда говорит тело</td></tr>
+</tbody></table>
+<footer>Слотов к съёмке: 7 · суммарный хронометраж готового материала: 380 сек. Собрано из <code>plan.yaml</code>, руками не правится.</footer>
+</div></body></html>
