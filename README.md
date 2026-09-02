@@ -8,7 +8,7 @@
 | Кому | Ссылка | Что внутри |
 |---|---|---|
 | ПЦ | https://kseniyashev.github.io/katya-content-plan/ | системная версия: по каналам и сводный план по дням |
-| **Эксперту** | **https://kseniyashev.github.io/katya-content-plan/approve/** | пять полей и задание на запись голосового, под телефон |
+| **Эксперту** | **https://kseniyashev.github.io/katya-content-plan/approve/** | четыре поля (формат · тема · фокус · что наговорить), под телефон |
 | архив W36 | /w36/ · /w36/approve/ · /w36/shoot/ | 31.08–06.09 |
 | архив W34 | /w34/ · /w34/approve/ · /w34/shoot/ | 17–23.08 |
 
@@ -47,7 +47,7 @@ python3 engine/plan_render.py experts/katya/plans/2026-W37/plan.yaml --projectio
 | Кому | Ссылка | Что внутри |
 |---|---|---|
 | ПЦ | https://kseniyashev.github.io/katya-content-plan/ | системная версия: по каналам и сводный план по дням |
-| **Эксперту** | **https://kseniyashev.github.io/katya-content-plan/approve/** | пять полей и задание на запись голосового, под телефон |
+| **Эксперту** | **https://kseniyashev.github.io/katya-content-plan/approve/** | четыре поля (формат · тема · фокус · что наговорить), под телефон |
 | архив W34 | /w34/ · /w34/approve/ · /w34/shoot/ | предыдущая неделя, 17–23.08 |
 
 20 слотов: 10 рилсов, 4 сторис-серии, 3 карусели, 3 поста в Telegram.
